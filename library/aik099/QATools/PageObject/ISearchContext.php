@@ -51,6 +51,6 @@ interface ISearchContext
 	 * @return mixed
 	 * @throws \InvalidArgumentException When invalid callback given.
 	 */
-	public function waitFor($timeout, $callback);
+	//public function waitFor($timeout, $callback);
 
 }

@@ -61,6 +61,26 @@ abstract class Page extends DocumentElement implements ISearchContext
 
 		return $this->urlBuilder->build($params);
 	}
+	
+	/**
+	* Returns relative url of the page .
+	*
+	* @param array $params Page parameters.
+	*
+	* @return string
+	* @throws PageException When url builder is missing.
+	*/
+	public function getRelativeUrl()
+	{
+		if ( !is_object($this->urlBuilder) ) {
+			throw new PageException(
+					'The UrlBuilder of a page not set, have you used @page-url annotation?',
+			PageException::TYPE_MISSING_URL_BUILDER
+			);
+		}
+	
+		return $this->urlBuilder->getPath();
+	}
 
 	/**
 	 * Opens this page in browser.

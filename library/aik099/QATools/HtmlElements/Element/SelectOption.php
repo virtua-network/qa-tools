@@ -50,7 +50,8 @@ class SelectOption extends AbstractTypifiedElement
 	 */
 	public function select($multiple = false)
 	{
-		if ( !$this->isSelected() ) {
+		//@TODO: JPE had to remove this as isSelected not implemented ?
+		//if ( !$this->isSelected() ) {
 			if ( $this->select === null ) {
 				throw new SelectException(
 					'No SELECT element association defined',
@@ -59,7 +60,7 @@ class SelectOption extends AbstractTypifiedElement
 			}
 
 			$this->select->getWrappedElement()->selectOption($this->getValue(), $multiple);
-		}
+		//}
 
 		return $this;
 	}
