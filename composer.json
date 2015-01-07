@@ -18,7 +18,7 @@
 	"require": {
 		"php": ">=5.3.1",
 		"behat/mink": "~1.5@dev",
-		"mindplay/annotations": "dev-master"
+		"virtua/php-annotations": "1.0.0"
 	},
 
 	"require-dev": {
